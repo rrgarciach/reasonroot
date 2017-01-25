@@ -9,7 +9,7 @@ function init() {
 	var statements = document.getElementsByTagName('statement');
 	//debugger;
 	for (var i = 0; i < statements.length; i++) {
-		roots[i] = render(<App />, statements[1], roots[i]);
+		roots[i] = render(<App />, statements[i], roots[i]);
 	}
 
 	//root = render(<App />, element, root);
