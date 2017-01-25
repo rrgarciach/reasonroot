@@ -9,8 +9,9 @@ function init() {
 	var stmtElements = document.getElementsByTagName('statement');
 	//debugger;
 	for (var i = 0; i < stmtElements.length; i++) {
-		var user = JSON.parse(stmtElements[i].getAttribute("user"));
-		roots[i] = render(<App user={user} />, stmtElements[i], roots[i]);
+		var stmt = JSON.parse(stmtElements[i].getAttribute("stmt"));
+		var stmts = JSON.parse(stmtElements[i].getAttribute("stmts"));
+		roots[i] = render(<App stmt={stmt} stmts={stmts} />, stmtElements[i], roots[i]);
 	}
 
 }

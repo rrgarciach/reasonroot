@@ -6,7 +6,7 @@ export default class App extends Component {
 	render(props) {
 		return (
 			<div class="app">
-				<Stmt user={props.user.id} />
+				<Stmt stmt={props.stmt} stmts={props.stmts}/>
 			</div>
 		);
 	}
