@@ -14,7 +14,7 @@ export default class Stmt extends Component {
 
 	}
 
-	render({ user }, { time, count }) {
+	render({ user }) {
 		return (
 			<div class={style.stmt}>
 				<h1>{ user }</h1>

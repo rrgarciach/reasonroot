@@ -6,10 +6,11 @@ import './style';
 let roots = [];
 function init() {
 	let App = require('./components/app').default;
-	var statements = document.getElementsByTagName('statement');
+	var stmtElements = document.getElementsByTagName('statement');
 	//debugger;
-	for (var i = 0; i < statements.length; i++) {
-		roots[i] = render(<App />, statements[i], roots[i]);
+	for (var i = 0; i < stmtElements.length; i++) {
+		var user = JSON.parse(stmtElements[i].getAttribute("user"));
+		roots[i] = render(<App user={user} />, stmtElements[i], roots[i]);
 	}
 
 	//root = render(<App />, element, root);
