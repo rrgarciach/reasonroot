@@ -13,7 +13,6 @@ function init() {
 		roots[i] = render(<App user={user} />, stmtElements[i], roots[i]);
 	}
 
-	//root = render(<App />, element, root);
 }
 
 // register ServiceWorker via OfflinePlugin, for prod only:
