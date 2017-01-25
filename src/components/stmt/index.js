@@ -17,11 +17,11 @@ export default class Stmt extends Component {
 	render({ stmt, stmts }) {
 		return (
 			<div class={style.stmt}>
-				<h1>{stmt.id}</h1>
+				{stmt.id}:{stmt.content}
 				<ul>
 					{stmt.childIds &&
 						stmt.childIds.map(function (childId, i) {
-							return <li>{stmts[childId].id}</li>
+							return <li><Stmt stmt={stmts[childId]} stmts={stmts}/></li>
 						})
 					}
 				</ul>
