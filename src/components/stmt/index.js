@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import style from './style';
 
 export default class Stmt extends Component {
 	state = {
@@ -16,16 +15,16 @@ export default class Stmt extends Component {
 
 	render({ stmt, stmts }) {
 		return (
-			<div class={style.stmt}>
+			<li class="stmt">
 				{stmt.id}:{stmt.content}
 				<ul>
 					{stmt.childIds &&
 						stmt.childIds.map(function (childId, i) {
-							return <li><Stmt stmt={stmts[childId]} stmts={stmts}/></li>
+							return <Stmt stmt={stmts[childId]} stmts={stmts}/>
 						})
 					}
 				</ul>
-			</div>
+			</li>
 		);
 	}
 }
