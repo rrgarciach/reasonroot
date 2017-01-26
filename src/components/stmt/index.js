@@ -5,8 +5,7 @@ export default class Stmt extends Component {
 		isOpen: false
 	};
 
-toggleOpen = () => {
-		//this.props.onDestroy(this.props.todo);
+	toggleOpen = () => {
 		this.setState({ "isOpen": !this.state.isOpen })
 	};
 
@@ -24,8 +23,9 @@ toggleOpen = () => {
 			<li class={this.state.isOpen ? "open" : "closed"}>
 
 				<div class="statementPad notSelected">
-					<div class="statement pro">
-						<span class="score">50%</span>{this.state.isOpen}:{main}:{stmt.id}:{stmt.content}
+					<div className={"statement " +  (stmt.isProMain?'pro':'con')}>
+						<span class="score">50%</span>
+						{main}:{stmt.id}:{stmt.content}
 					</div>
 					<div class="opener" onclick={this.toggleOpen}>▽</div>
 				</div>
