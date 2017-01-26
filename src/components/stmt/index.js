@@ -9,25 +9,17 @@ export default class Stmt extends Component {
 		this.setState({ "isOpen": !this.state.isOpen })
 	};
 
-
-	componentDidMount() {
-
-	}
-
-	componentWillUnmount() {
-
-	}
-
 	render({ stmt, stmts, main }) {
 		return (
 			<li class={this.state.isOpen ? "open" : "closed"}>
-
 				<div class="statementPad notSelected">
-					<div className={"statement " +  (stmt.isProMain?'pro':'con')}>
+					<div className={"statement " + (stmt.isProMain ? 'pro' : 'con')}>
 						<span class="score">50%</span>
 						{main}:{stmt.id}:{stmt.content}
 					</div>
-					<div class="opener" onclick={this.toggleOpen}>▽</div>
+					{stmt.childIds &&
+						<div class="opener" onclick={this.toggleOpen}>▽</div>
+					}
 				</div>
 				<ul>
 					{stmt.childIds &&
