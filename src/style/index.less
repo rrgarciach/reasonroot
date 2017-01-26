@@ -13,11 +13,121 @@ html, body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-* {
-	box-sizing: border-box;
+.app {
+	padding-left: 10px;
+	max-width: 800px;
+	min-width: 300px;
 }
 
-.app {
-	padding-left: 20px;
-	//height: 100%;
-}
+.si{
+    line-height: 1.1;
+    max-width: 600px;
+    margin: auto;
+    }
+    
+    ul{
+    border-left: 1px solid #ECECEC;
+    padding: 0;
+    margin: 0 0 0 20px;
+    width: 100%;
+    }
+    
+    li{
+    width: 100%;
+    list-style-type: none;
+    margin: 0px 0 0 0;
+    padding: 5px 0 0 0;
+    }
+    
+    .statementPad {
+    padding:0 5px;
+    position: relative;
+    }
+    
+    .statement {
+    position: relative;
+    margin-top: .25em;
+    border-radius: .5em;
+    color: #4A4A4A;
+    background: #ECECEC;
+    padding: .25em;
+    min-height: 2em;
+    font-size: 100%;
+    }
+    
+    .statement a,
+    .statement a:hover{
+    color: white;
+    }
+    
+    .closed ul{
+    display: none;
+    }
+    
+    .citation {
+    font-size: smaller;
+    font-style: italic;
+    }
+    
+    .notSelected .citation {
+    display: none;
+    }
+    
+    .score {
+    display: block;
+    float: left;
+    font-size: 1.99em;
+    padding-right: .25em;
+    padding-right: .25em;
+    /*font-weight: 800;*/
+    }
+    
+    .pro {
+    background-color: #61B3D9;
+    color: white;
+    border-color: #61B3D9;
+    }
+    
+    .con {
+    background-color: #F5A623;
+    color: white;
+    border-color: #F5A623;
+    }
+    
+    .pro:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: transparent;
+    border-right-color: #61B3D9;
+    border-width: 10px;
+    margin-top: -10px;
+    }
+    
+    .con:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: transparent;
+    border-left-color: #F5A623;
+    border-width: 10px;
+    margin-top: -10px;
+    }
+    
+    .opener {
+    position: absolute;
+    left: -2px;
+    bottom: -10px;
+    cursor: pointer;
+    color: #4A4A4A;
+    }
