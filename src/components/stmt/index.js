@@ -13,7 +13,7 @@ export default class Stmt extends Component {
 		this.setState({ "isSelected": !this.state.isSelected })
 	};
 
-	render({ stmt, stmts, main }) {
+	render({ stmt, dict, isMain }) {
 		//debugger;
 		return (
 			<li class={this.state.isOpen ? "open" : "closed"}>
@@ -21,7 +21,7 @@ export default class Stmt extends Component {
 					<div className={"statement " + (stmt.statement.isProMain ? 'pro' : 'con')}>
 
 						<span class="score">
-							{main ?
+							{isMain ?
 								Math.round(stmt.weightedPercentage * 100) + '%' :
 								Math.floor(Math.abs(stmt.weightDif))
 							}
@@ -54,7 +54,7 @@ export default class Stmt extends Component {
 				<ul>
 					{stmt.statement.childIds &&
 						stmt.statement.childIds.map(function (childId, i) {
-							return <Stmt stmt={stmts[childId]} stmts={stmts} />
+							return <Stmt stmt={dict[childId]} dict={dict} />
 						})
 					}
 				</ul>
