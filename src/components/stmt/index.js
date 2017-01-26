@@ -10,20 +10,21 @@ export default class Stmt extends Component {
 	};
 
 	render({ stmt, stmts, main }) {
+		//debugger;
 		return (
 			<li class={this.state.isOpen ? "open" : "closed"}>
 				<div class="statementPad notSelected">
-					<div className={"statement " + (stmt.isProMain ? 'pro' : 'con')}>
+					<div className={"statement " + (stmt.statement.isProMain ? 'pro' : 'con')}>
 						<span class="score">50%</span>
-						{main}:{stmt.id}:{stmt.content}
+						{main}:{stmt.id}:{stmt.statement.content}
 					</div>
-					{stmt.childIds &&
+					{stmt.statement.childIds.length > 0 &&
 						<div class="opener" onclick={this.toggleOpen}>▽</div>
 					}
 				</div>
 				<ul>
-					{stmt.childIds &&
-						stmt.childIds.map(function (childId, i) {
+					{stmt.statement.childIds &&
+						stmt.statement.childIds.map(function (childId, i) {
 							return <Stmt stmt={stmts[childId]} stmts={stmts} />
 						})
 					}

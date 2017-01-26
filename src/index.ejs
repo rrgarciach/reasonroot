@@ -13,37 +13,18 @@
 	<link rel="manifest" href="./manifest.json">
 </head>
 <body>
-<statement stmt='
-{
-	"id": "s1",
-	"content": "Content for s1",
-	"isProMain": true,
-	"childIds": ["s2", "s3"]
-}
-' stmts=' {
-	"s1": {
-		"id": "s1",
-		"isProMain": true,
-		"childIds": ["s2", "s3"]
-	},
-	"s2": {
-		"id": "s2",
-		"content": "Content for s2",
-		"isProMain": false,
-		"childIds": ["s4"]
-	},
-	"s3": {
-		"id": "s3",
-		"content": "Content for s3",
-		"isProMain": true
-	},
-	"s4": {
-		"id": "s4",
-		"content": "Content for s4",
-		"isProMain": true
-	}
-}'> </statement>
+<statement 
+
+stmt='{"statement":{"isProMain":true,"affects":"AverageTheConfidence","childIds":["1_1","1_2"],"id":"s1","isProParent":true},"generation":0,"siblingWeight":1,"confidencePro":1,"confidenceCon":1,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":1,"weightCon":1,"weightDif":0,"mainPercent":1,"weightedPercentage":0.5}'
+
+ stmts='{"s1":{"statement":{"isProMain":true,"affects":"AverageTheConfidence","childIds":["1_1","1_2"],"id":"s1","isProParent":true},"generation":0,"siblingWeight":1,"confidencePro":1,"confidenceCon":1,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":1,"weightCon":1,"weightDif":0,"mainPercent":1,"weightedPercentage":0.5},"1_1":{"statement":{"isProMain":true,"affects":"AverageTheConfidence","childIds":[],"id":"1_1","isProParent":true},"generation":1,"siblingWeight":1,"confidencePro":1,"confidenceCon":0,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":1,"weightCon":0,"weightDif":1,"mainPercent":0.5,"weightedPercentage":1},"1_2":{"statement":{"isProMain":false,"affects":"AverageTheConfidence","childIds":[],"id":"1_2","isProParent":false},"generation":1,"siblingWeight":1,"confidencePro":0,"confidenceCon":1,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":0,"weightCon":1,"weightDif":-1,"mainPercent":0.5,"weightedPercentage":1}}'
+ > </statement>
 <hr />
-<statement stmt='{"id":"2s1", "childIds":["2s2","2s3"]}' stmts='{"2s1":{"id":"2s1", "childIds":["2s2","2s3"]}, "2s2":{"id":"2s2"}, "2s3":{"id":"2s3"}}'> </statement>
+<statement 
+
+stmt='{"statement":{"isProMain":true,"affects":"AverageTheConfidence","childIds":["1_1","1_2"],"id":"s1","isProParent":true},"generation":0,"siblingWeight":1,"confidencePro":1,"confidenceCon":1,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":1,"weightCon":1,"weightDif":0,"mainPercent":1,"weightedPercentage":0.5}'
+
+ stmts='{"s1":{"statement":{"isProMain":true,"affects":"AverageTheConfidence","childIds":["1_1","1_2"],"id":"s1","isProParent":true},"generation":0,"siblingWeight":1,"confidencePro":1,"confidenceCon":1,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":1,"weightCon":1,"weightDif":0,"mainPercent":1,"weightedPercentage":0.5},"1_1":{"statement":{"isProMain":true,"affects":"AverageTheConfidence","childIds":[],"id":"1_1","isProParent":true},"generation":1,"siblingWeight":1,"confidencePro":1,"confidenceCon":0,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":1,"weightCon":0,"weightDif":1,"mainPercent":0.5,"weightedPercentage":1},"1_2":{"statement":{"isProMain":false,"affects":"AverageTheConfidence","childIds":[],"id":"1_2","isProParent":false},"generation":1,"siblingWeight":1,"confidencePro":0,"confidenceCon":1,"importancePro":0,"importanceCon":0,"importanceValue":1,"maxAncestorWeight":1,"weightPro":0,"weightCon":1,"weightDif":-1,"mainPercent":0.5,"weightedPercentage":1}}'
+ > </statement>
 </body>
 </html>
