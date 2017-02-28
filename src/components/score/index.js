@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import Editor from '../editor';
 
 export default class Score extends Component {
 	state = {
@@ -13,7 +14,7 @@ export default class Score extends Component {
 		this.setState({ "isSelected": !this.state.isSelected })
 	};
 
-	render({ score, dict, isMain }) {
+	render({ score, dict, isMain, upsertScore }) {
 		//debugger;
 		return (
 			<li class={this.state.isOpen ? "open" : "closed"}>
@@ -51,10 +52,11 @@ export default class Score extends Component {
 						<div class="opener" onclick={this.toggleOpen}>▽</div>
 					}
 				</div>
+				<Editor score={score} dict={dict} text={"text"} upsertScore={upsertScore}/>
 				<ul>
 					{score.statement.childIds &&
 						score.statement.childIds.map(function (childId, i) {
-							return <Score score={dict[childId]} dict={dict} />
+							return <Score score={dict[childId]} dict={dict} upsertScore={upsertScore} />
 						})
 					}
 				</ul>
